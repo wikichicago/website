@@ -1,0 +1,106 @@
+:root {
+	--color-bg-primary-light: #ffffff;
+	--color-bg-primary-dark: #121212;
+
+	--color-bg-secondary-light: #fcfcfc;
+	--color-bg-secondary-dark: #252525;
+
+	--color-text-primary-light: #000000;
+	--color-text-primary-dark: #ffffff;
+
+	--color-accent-primary-light: #0f9be0;
+	--color-accent-primary-dark: #80d9ff;
+
+	--color-accent-secondary-light: #8354f2;
+	--color-accent-secondary-dark: #9c75f5;
+
+	--color-accent-tertiary-light: #d200a4;
+	--color-accent-tertiary-dark: #f254c3;
+
+	--color-bg-primary: var(--color-bg-primary-light);
+	--color-bg-secondary: var(--color-bg-secondary-light);
+	--color-text-primary: var(--color-text-primary-light);
+	--color-accent-primary: var(--color-accent-primary-light);
+	--color-accent-secondary: var(--color-accent-secondary-light);
+	--color-accent-tertiary: var(--color-accent-tertiary-light);
+}
+  
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-bg-primary: var(--color-bg-primary-dark);
+		--color-bg-secondary: var(--color-bg-secondary-dark);
+		--color-text-primary: var(--color-text-primary-dark);
+		--color-accent-secondary: var(--color-accent-secondary-dark);
+		--color-accent-tertiary: var(--color-accent-tertiary-dark);
+	}
+}
+  
+body {
+	background-color: var(--color-bg-secondary);
+	color: var(--color-text-primary);
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+article {
+	max-width: 1200px;
+	padding: 1em;
+	background-color: var(--color-bg-primary);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 750px) {
+	article{
+		padding: 3em;
+	}
+}
+
+article > section[typeof="Organization"] > header > h1 {
+	font-size: 2em;
+	margin-top: 0;
+}
+
+article > section[typeof="Organization"] {
+	display: flow-root;
+}
+
+article > section[typeof="Organization"] + section {
+	clear: both;
+}
+
+article > section[typeof="Organization"] > figure[property="logo"] {
+	float: right;
+	max-width: 40%;
+	margin: 0 0 1em 1em;
+}
+
+article > section > section[typeof="Event"] {
+	display: flow-root;
+}
+
+article > section > section[typeof="Event"] > figure[property="image"] {
+	float: left;
+	max-width: 40%;
+	margin: 0 1em 0 0;
+}
+
+figure[property="logo"] img,
+figure[property="image"] img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+figure[property="logo"] figcaption,
+figure[property="image"] figcaption {
+	font-size: 0.875em;
+}
+
+a {
+	color: var(--color-accent-primary);
+}
+
+a:visited {
+	color: var(--color-accent-secondary);
+}
