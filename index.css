@@ -56,20 +56,20 @@ article {
 	}
 }
 
-article > section[typeof="Organization"] > header > h1 {
+article > section[typeof~="NGO"] > header > h1 {
 	font-size: 2em;
 	margin-top: 0;
 }
 
-article > section[typeof="Organization"] {
+article > section[typeof~="NGO"] {
 	display: flow-root;
 }
 
-article > section[typeof="Organization"] + section {
+article > section[typeof~="NGO"] + section {
 	clear: both;
 }
 
-article > section[typeof="Organization"] > figure[property="logo"] {
+article > section[typeof~="NGO"] > figure[property="logo"] {
 	float: right;
 	max-width: 40%;
 	margin: 0 0 1em 1em;
